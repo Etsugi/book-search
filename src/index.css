@@ -2,8 +2,12 @@
 
 @import url("./components/Header/Header.css");
 @import url("./components/SearchForm/SearchForm.css");
+@import url("./components/Footer/Footer.css");
+
 
 .root {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   width: 100%;
