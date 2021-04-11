@@ -3,8 +3,8 @@ import React from 'react';
 import noImage from '../../images/no-image.jpg';
 
 function BookCard(props) {
-  const author = props.book.author_name;
-  const title = props.book.title;
+  const author = props.book.author_name || 'Автор не указан';
+  const title = props.book.title || 'Название не указано';
 
   function image() {
     if (props.book.cover_i) {
@@ -18,12 +18,16 @@ function BookCard(props) {
     }
   }
 
+  function handleOpenPopup() {
+
+  }
+
   return (
     <div className="book-card">
-      <img className="book-card__image" alt={''} src={image()} />
+      <img className="book-card__image" alt={title} src={image()} />
       <p className="book-card__title">{title}</p>
       <p className="book-card__author">{author}</p>
-      <div onClick={''} className="book-card__overlay"></div>
+      <div onClick={handleOpenPopup} className="book-card__overlay"></div>
     </div>
   );
 }

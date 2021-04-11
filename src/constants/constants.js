@@ -1,3 +1,6 @@
+const notFound = 'Ничего не найдено';
+const startSearch = 'Воспользуйтесь поиском';
+
 function countGridElement() {
   let count = 1;
   if (window.innerWidth < 636) {
@@ -20,4 +23,4 @@ window.addEventListener('resize', countGridElement);
 const rowCount = count * 4 === 4 ? 5 : count * 4;
 
 
-export { count, rowCount };
+export { count, rowCount, notFound, startSearch };

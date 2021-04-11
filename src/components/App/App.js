@@ -25,7 +25,6 @@ function App() {
   }
 
   function search(data) {
-    console.log(data);
     setSearch(data);
   }
 
@@ -36,6 +35,7 @@ function App() {
       />
       <BooksCardList
         books={isBooks}
+        isSearch={isSearch}
       />
       <Footer />
     </>

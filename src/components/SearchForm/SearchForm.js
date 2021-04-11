@@ -2,10 +2,30 @@ import React from 'react';
 
 function SearchForm(props) {
   const [isInput, setInput] = React.useState('');
+  const [isTimerId, setTimerId] = React.useState(false);
 
   React.useEffect(() => {
-    //props.search(isInput);
+      if(isTimerId === false) {
+        timerStart();
+      } else {
+        timerStop()
+      }
   }, [isInput])
+
+  function timerStart() {
+    let timerId = setTimeout(timer, 2000);
+    setTimerId(timerId);
+  }
+  
+  function timerStop() {
+    clearTimeout(isTimerId);
+    timerStart();
+  }
+
+  function timer() {
+    props.search(isInput);
+    setTimerId(false)
+  }
 
   function handleChange(e) {
     setInput(e.target.value);
