@@ -4,9 +4,13 @@ import BookCard from '../BookCard/BookCard';
 
 import { count, rowCount } from '../../constants/constants';
 
-function BooksCardList() {
+function BooksCardList(props) {
   const [books, setBooks] = React.useState([]);
   const [currentBookCount, setCurrentBookCount] = React.useState(rowCount);
+
+  React.useEffect(() => {
+    setBooks(props.books);
+  }, [props.books])
 
   function addBooks() {
     setCurrentBookCount(currentBookCount + (count === 1 ? 2 : count));

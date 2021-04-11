@@ -4,11 +4,13 @@ import headerPicture from '../../images/book.png';
 
 import SearchForm from '../SearchForm/SearchForm';
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <img className="header__logo" src={headerPicture} alt="Лого сайта"/>
-      <SearchForm />
+      <SearchForm 
+        search={props.search}
+      />
     </header>
   );
 }

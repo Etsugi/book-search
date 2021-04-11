@@ -1,6 +1,6 @@
 .books-card-list__button {
-  width: calc(100% - 140px);
-  margin: 50px 70px 80px;
+  width: calc(100% - 60px);
+  margin: 50px 30px 80px;
   padding: 11px 0 9px;
   font-size: 12px;
   font-style: normal;
@@ -13,26 +13,19 @@
   border-radius: 6px;
   border: none;
   outline: none;
-  transition: opacity 0.1s ease-in-out 0s !important;
+  transition: background-color 0.2s ease-in-out 0s !important;
 
   transition: all 0.5s ease-in-out 0s;
 }
 
 .books-card-list__button:hover {
-  opacity: .80;
+  background-color: black;
   cursor: pointer;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .books-card-list__button {
-    width: calc(100% - 20px);
-    margin: 50px 10px 80px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .books-card-list__button {
-    width: calc(100% - 60px);
-    margin: 50px 30px 80px;
+    width: calc(100% - 30px);
+    margin: 50px 15px 80px;
   }
 }

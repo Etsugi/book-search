@@ -1,0 +1,28 @@
+.book-card__image {
+  margin: 10px 0 0 0;
+  align-self: center;
+  max-width: 345px;
+  min-width: 74px;
+  max-height: 155px;
+  min-height: 140px;
+  outline: 1px solid grey;
+  background-image: url('../../../images/no-image.jpg');
+  background-position: center;
+  background-size: cover;
+
+  transition: all 0.5s ease-in-out 0s;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .book-card__image {
+    max-width: 280px;
+    max-height: 120px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .book-card__image {
+    max-width: 320px;
+    max-height: 140px;
+  }
+}
