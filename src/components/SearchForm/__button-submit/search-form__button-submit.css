@@ -1,0 +1,24 @@
+.search-form__button-submit {
+  margin: 0;
+  padding: 0 10px;
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  outline: none;
+  border: none;
+  background-color: #214ea5;
+  transition: 0.2s background-color ease-in-out 0s;
+}
+
+.search-form__button-submit:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .search-form__button-submit {
+    padding: 0 7.5px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
