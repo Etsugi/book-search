@@ -6,6 +6,8 @@
   margin: 0;
   display: flex;
   outline: 1px solid red;
+
+  transition: all 0.5s ease-in-out 0s;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

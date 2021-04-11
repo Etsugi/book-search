@@ -6,6 +6,8 @@
   margin: auto 0 0 0;
   padding: 15px 0 45px 30px;
   outline: 1px solid red;
+
+  transition: all 0.5s ease-in-out 0s;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

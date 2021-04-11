@@ -1,0 +1,30 @@
+@import url("./__image/book-card__image.css");
+@import url("./__title/book-card__title.css");
+@import url("./__author/book-card__author.css");
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  width: 364px;
+  height: 271px;
+  margin: 0;
+  padding: 0;
+  background: #222222;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.5s ease-in-out 0s;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .book-card {
+    width: 300px;
+    height: 236px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .book-card {
+    width: 339px;
+    height: 258px;
+  }
+}
