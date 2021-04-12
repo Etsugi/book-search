@@ -35,6 +35,7 @@ function BooksCardList(props) {
               {books.slice(0, currentBookCount).map(book => 
                 <BookCard 
                   book={book}
+                  onBookClick={props.onBookClick}
                   key={book.key || book.cover_i}
                 />
               )}
