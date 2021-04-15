@@ -6,6 +6,7 @@
 @import url("./components/BookCard/BookCard.css");
 @import url("./components/BookPopup/BookPopup.css");
 @import url("./components/Footer/Footer.css");
+@import url("./components/Preloader/Preloader.css");
 
 
 .root {

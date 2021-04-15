@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getBooks } from '../../redux/actions';
+import { getBooks, preloaderShow, preloaderHide } from '../../redux/actions';
 
 import BooksApi from '../../utils/BooksApi';
 
@@ -45,13 +45,17 @@ function SearchForm(props) {
   }
 
   function searchBooks(isInput) {
+    props.preloaderShow();
     BooksApi.searchBooks(isInput)
     .then((data) => {
       props.getBooks(data.docs, isInput);
     })
     .catch((err) => {
       console.log(err);
-    });
+    })
+    .finally(() => {
+      props.preloaderHide();
+    })
   }
 
   return (
@@ -63,7 +67,9 @@ function SearchForm(props) {
 }
 
 const mapDispatchToProps = {
-  getBooks
+  getBooks,
+  preloaderShow,
+  preloaderHide
 }
 
 export default connect(null, mapDispatchToProps) (SearchForm);

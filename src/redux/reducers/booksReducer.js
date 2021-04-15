@@ -1,4 +1,4 @@
-import { GET_BOOKS } from "./types"
+import { GET_BOOKS } from "../types"
 
 const initialState = {
   books: [],

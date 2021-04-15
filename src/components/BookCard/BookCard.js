@@ -22,7 +22,7 @@ function BookCard(props) {
   }
 
   function handleClick() {
-    props.bookPopupOpen({book: props.book, image});
+    props.bookPopupOpen(props.book, image);
   }
 
   return (

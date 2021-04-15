@@ -1,4 +1,4 @@
-import { BOOK_POPUP_OPEN, BOOK_POPUP_CLOSE } from "./types"
+import { BOOK_POPUP_OPEN, BOOK_POPUP_CLOSE } from "../types"
 
 const initialState = {
   book: {},
