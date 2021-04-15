@@ -1,0 +1,17 @@
+.book-card__title {
+  margin: 15px 7.5px 0 7.5px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  overflow: hidden;
+
+  transition: all 0.5s ease-in-out 0s;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .book-card__title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

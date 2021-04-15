@@ -1,0 +1,18 @@
+@import url("./__copyright/footer__copyright.css");
+
+.footer {
+  display: block;
+  width: calc(100% - 30px);
+  margin: auto 0 0 0;
+  padding: 15px 0 45px 30px;
+
+  transition: all 0.5s ease-in-out 0s;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    width: calc(100% - 15px);
+    margin: auto 0 0 0;
+    padding: 7.5px 0 30px 15px;
+  }
+}

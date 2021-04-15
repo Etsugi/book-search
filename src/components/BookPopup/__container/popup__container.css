@@ -1,0 +1,27 @@
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  width: max-content;
+  max-width: 75%;
+  height: max-content;
+  z-index: 1;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .popup__container {
+    min-width: 75%;
+  }
+}
+
+@media  (min-width: 769px) {
+  .popup__container {
+    width: 576px !important;
+  }
+}

@@ -1,0 +1,14 @@
+.book-card__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out 0s;
+}
+
+.book-card__overlay:hover {
+  background-color:rgba(0,0,0,.3);
+  cursor: pointer;
+}

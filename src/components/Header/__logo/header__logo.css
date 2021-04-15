@@ -1,0 +1,17 @@
+.header__logo {
+  width: 80px;
+  height: 80px;
+  margin: 15px 30px;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: all 0.5s ease-in-out 0s;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header__logo {
+    width: 60px;
+    height: 60px;
+    margin: 7.5px auto 15px auto;
+  }
+}
