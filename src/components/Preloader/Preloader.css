@@ -35,7 +35,7 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #BFE2FF;
-    animation: preloader-5-spin 3s linear infinite;
+    animation: preloader__round-spin 3s linear infinite;
 }
 .preloader__round:after {
     content: "";
