@@ -1,4 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getBooks } from '../../redux/actions';
+
+import BooksApi from '../../utils/BooksApi';
 
 function SearchForm(props) {
   const [isInput, setInput] = React.useState('');
@@ -13,8 +17,10 @@ function SearchForm(props) {
   }, [isInput])
 
   function timerStart() {
-    let timerId = setTimeout(timer, 2000);
-    setTimerId(timerId);
+    if(isInput.length !== 0) {
+      let timerId = setTimeout(timer, 2000);
+      setTimerId(timerId);
+    }
   }
   
   function timerStop() {
@@ -23,7 +29,7 @@ function SearchForm(props) {
   }
 
   function timer() {
-    props.search(isInput);
+    searchBooks(isInput);
     setTimerId(false)
   }
 
@@ -33,7 +39,19 @@ function SearchForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.search(isInput);
+    if(isInput.trim().length !== 0) {
+      searchBooks(isInput);
+    }
+  }
+
+  function searchBooks(isInput) {
+    BooksApi.searchBooks(isInput)
+    .then((data) => {
+      props.getBooks(data.docs, isInput);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   }
 
   return (
@@ -44,4 +62,8 @@ function SearchForm(props) {
   );
 }
 
-export default SearchForm;
+const mapDispatchToProps = {
+  getBooks
+}
+
+export default connect(null, mapDispatchToProps) (SearchForm);

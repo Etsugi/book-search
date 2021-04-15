@@ -8,9 +8,7 @@ function Header(props) {
   return (
     <header className="header">
       <img className="header__logo" src={headerPicture} alt="Лого сайта"/>
-      <SearchForm 
-        search={props.search}
-      />
+      <SearchForm />
     </header>
   );
 }

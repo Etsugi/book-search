@@ -1,6 +1,6 @@
 const BASE_URL = 'https://openlibrary.org';
 
-async function getBooks(search) {
+async function searchBooks(search) {
   return await fetch(`${BASE_URL}/search.json?q=${search}`, {
     method: 'GET'
   })
@@ -17,5 +17,5 @@ function resHandler(res) {
 }
 
 export default {
-  getBooks
+  searchBooks
 }
