@@ -39,23 +39,25 @@ function SearchForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if(isInput.trim().length !== 0) {
-      searchBooks(isInput);
-    }
+    searchBooks(isInput);
   }
 
   function searchBooks(isInput) {
-    props.preloaderShow();
-    BooksApi.searchBooks(isInput)
-    .then((data) => {
-      props.getBooks(data.docs, isInput);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-    .finally(() => {
-      props.preloaderHide();
-    })
+    if(isInput.trim().length !== 0) {
+      props.preloaderShow();
+      BooksApi.searchBooks(isInput)
+      .then((data) => {
+        props.getBooks(data.docs, isInput);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        props.preloaderHide();
+      })
+    } else {
+      props.getBooks([], isInput);
+    }
   }
 
   return (
