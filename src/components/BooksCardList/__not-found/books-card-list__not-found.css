@@ -1,25 +1,25 @@
 .books-card-list__not-found {
-  margin: 74px auto 123px;
+  margin: auto;
   padding: 0;
-  font-size: 24px;
+  font-size: 3vw;
+  line-height: 4vw;
   font-style: normal;
-  font-weight: 500;
-  line-height: 29px;
   letter-spacing: 0em;
   text-align: center;
 
-  transition: all 0.5s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
 }
 
-
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .books-card-list__not-found {
-    margin: 70px auto 80px;
+    font-size: 6vw;
+    line-height: 7vw;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .books-card-list__not-found {
-    margin: 23.04vh auto 96px;
+    font-size: 4vw;
+    line-height: 5vw;
   }
 }

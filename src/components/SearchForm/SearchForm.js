@@ -39,6 +39,7 @@ function SearchForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    clearTimeout(isTimerId);
     searchBooks(isInput);
   }
 
@@ -62,7 +63,7 @@ function SearchForm(props) {
 
   return (
     <form className="search-form" onSubmit={handleSubmit} noValidate>
-      <input className="search-form__input" placeholder="Книга, автор" onChange={handleChange}></input>
+      <input className="search-form__input" placeholder="Книга, автор" onChange={handleChange} autoFocus></input>
       <button className="search-form__button-submit" onClick={handleSubmit}>Найти</button>
     </form>
   );
